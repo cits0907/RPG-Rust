@@ -1,0 +1,8 @@
+[package]
+name = "Random-Password-Generator-Rust"
+version = "1.0.0"
+authors = ["cits0907"]
+edition = "2018"
+
+[dependencies]
+rand = "*"
