@@ -1,7 +1,7 @@
 use rand::Rng;
 
 fn main() {
-    println!("{}", get_pass(16, true, true, true, false));
+	println!("{}", get_pass(16, true, true, true, false));
 }
 
 fn get_pass(len: usize, use_num: bool, use_lwr: bool, use_upr: bool, use_sym: bool) -> String {
@@ -16,14 +16,14 @@ fn get_pass(len: usize, use_num: bool, use_lwr: bool, use_upr: bool, use_sym: bo
 	}
 
 	let mut i = 0;
-    let mut password = "".to_string();
-    let mut rng = rand::thread_rng();
+	let mut password = "".to_string();
+	let mut rng = rand::thread_rng();
 	while i < len {
-        let rand = rng.gen::<usize>() % letters.len();
-        if !password.ends_with(letters.chars().nth(rand).unwrap()) {
-            password.push_str(&letters.chars().nth(rand).unwrap().to_string());
-            i += 1;
-        }
+		let rand = rng.gen::<usize>() % letters.len();
+		if !password.ends_with(letters.chars().nth(rand).unwrap()) {
+			password.push_str(&letters.chars().nth(rand).unwrap().to_string());
+			i += 1;
+		}
 	}
 
 	password
