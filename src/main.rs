@@ -25,6 +25,5 @@ fn get_pass(len: usize, use_num: bool, use_lwr: bool, use_upr: bool, use_sym: bo
 			i += 1;
 		}
 	}
-
 	password
 }

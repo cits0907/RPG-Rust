@@ -1,5 +1,5 @@
 [package]
-name = "Random-Password-Generator-Rust"
+name = "random_password_generator_rust"
 version = "1.0.0"
 authors = ["cits0907"]
 edition = "2018"
