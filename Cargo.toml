@@ -1,5 +1,5 @@
 [package]
-name = "random_password_generator_rust"
+name = "rustpg"
 version = "1.0.0"
 authors = ["cits0907"]
 edition = "2018"

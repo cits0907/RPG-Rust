@@ -1,7 +1,20 @@
 use rand::Rng;
+use std::env;
 
 fn main() {
-	println!("{}", get_pass(16, true, true, true, false));
+	let args: Vec<String> = env::args().skip(1).collect();
+	if args.len() == 5 {
+		let len: usize = match args[0].parse() {
+			Ok(t) => t,
+			Err(_) => {
+				println!("Illegal Argument Error");
+				return;
+			}
+		};
+		println!("{}", get_pass(len, args[1] == "t", args[2] == "t", args[3] == "t", args[4] == "t"));
+	} else {
+		println!("{}", get_pass(16, true, true, true, false));
+	}
 }
 
 fn get_pass(len: usize, use_num: bool, use_lwr: bool, use_upr: bool, use_sym: bool) -> String {
